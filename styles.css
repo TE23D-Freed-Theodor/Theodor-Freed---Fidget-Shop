@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "lato";
+    src: url("Lato-Regular.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* gör så att ett elements padding och margin räknas in i dess storlek */
+}
+
+body {
+    font-family: "lato", sans-serif;
+    color: #333;
+}
+
+#header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.navigation {
+    padding: 15px;
+    background-color: #222;
+}
+
+.navigation ul {
+    display: flex; /* Gör så att alla items placeras horisontellt */
+    justify-content: center;
+    list-style: none;
+}
+
+.navigation li a { /* Förändrar alla länkar inom navigation-menyn */
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.navigation li a:hover {
+    background-color: #444; /* Placeras musen över en länk så ändras bakgrundsfärgen till grå */
+}
+
+#footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #222;
+}
+
+.main-section {
+    display: grid; /* gör den till en grid-layout */
+    grid-template-columns: 3fr 1fr; /* gör så att den blir 4 kolumner, där 3 tas upp av "produkter" och en tas upp av "kundvagn" */
+    gap: 20px; /* 20px mellanrum mellan kolumnerna */
+    padding: 20px; /* 20px padding runt produkter och kundvagn */
+}
+
+@media (max-width: 500px) { /* varje gång den är mindre än 500px bred */
+    .main-section {
+        grid-template-columns: 1fr; /* allt blir en kolumn istället för 4 */
+    }
+}
