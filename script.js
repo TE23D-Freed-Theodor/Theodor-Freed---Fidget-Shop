@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function displayer() {
-    const cartDiv = document.getElementById('kundvagn');
-    cartDiv.innerHTML = '';
+    const kundvagn = document.getElementById('kundvagn');
+    kundvagn.innerHTML = '';
 
     cart.forEach((item, index) => {
       const productElement = document.createElement('div');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       productElement.appendChild(removeBtn);
-      cartDiv.appendChild(productElement);
+      kundvagn.appendChild(productElement);
     });
   }
 
